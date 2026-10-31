@@ -1,0 +1,257 @@
+
+.discounts-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f5f7fb;
+  color: #202a3c;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.discounts-header,
+.discount-table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.discount-eyebrow {
+  color: #6254d9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.discounts-header h1 {
+  font-size: 29px;
+  margin: 8px 0;
+}
+
+.discounts-header p,
+.discount-table-heading p {
+  color: #8791a3;
+  font-size: 14px;
+  margin: 0;
+}
+
+.discount-primary-btn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #6254d9;
+  color: white;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.discount-primary-btn:hover {
+  background: #5042c0;
+}
+
+.discount-form,
+.discount-table-card {
+  background: white;
+  border: 1px solid #e9edf4;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px rgba(20, 30, 60, 0.035);
+}
+
+.discount-form {
+  padding: 24px;
+  margin: 28px 0;
+}
+
+.discount-form h2,
+.discount-table-heading h2 {
+  margin: 0 0 18px;
+  font-size: 18px;
+}
+
+.discount-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.discount-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #465168;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.discount-form-grid input,
+.discount-form-grid select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #dfe4ed;
+  border-radius: 8px;
+  background: white;
+  outline: none;
+  font: inherit;
+  color: #30394d;
+}
+
+.discount-form-grid input:focus,
+.discount-form-grid select:focus {
+  border-color: #6254d9;
+  box-shadow: 0 0 0 3px rgba(98, 84, 217, 0.1);
+}
+
+.discount-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.discount-secondary-btn {
+  padding: 11px 18px;
+  border: 1px solid #e1e5ee;
+  border-radius: 8px;
+  background: white;
+  color: #47536a;
+  cursor: pointer;
+}
+
+.discount-table-card {
+  margin-top: 28px;
+  overflow: hidden;
+}
+
+.discount-table-heading {
+  padding: 22px;
+}
+
+.discount-table-heading h2 {
+  margin-bottom: 5px;
+}
+
+.discount-count {
+  padding: 7px 12px;
+  background: #f1efff;
+  color: #6254d9;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.discount-table-wrapper {
+  overflow-x: auto;
+}
+
+.discount-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.discount-table th {
+  padding: 15px 17px;
+  background: #f8f9fc;
+  color: #8791a3;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.discount-table td {
+  padding: 16px 17px;
+  border-top: 1px solid #f0f2f6;
+  color: #586479;
+  font-size: 13px;
+}
+
+.discount-table td strong {
+  color: #26334a;
+}
+
+.discount-code {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #f1efff;
+  color: #6254d9;
+  border-radius: 6px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+}
+
+.discount-status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.discount-status.active {
+  background: #e7f8ef;
+  color: #16845b;
+}
+
+.discount-status.inactive {
+  background: #fff0f0;
+  color: #c03939;
+}
+
+.discount-deactivate-btn {
+  padding: 7px 11px;
+  border: 1px solid #f0caca;
+  border-radius: 7px;
+  background: #fff5f5;
+  color: #c03939;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.discount-deactivate-btn:hover {
+  background: #ffe7e7;
+}
+
+.discount-empty {
+  text-align: center;
+  padding: 35px !important;
+  color: #929bad !important;
+}
+
+.discount-alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 18px;
+  font-size: 13px;
+}
+
+.discount-alert.error {
+  background: #fff0f0;
+  color: #c03939;
+}
+
+.discount-alert.success {
+  background: #e7f8ef;
+  color: #16845b;
+}
+
+.discount-loading {
+  padding: 40px;
+  color: #667085;
+}
+
+@media (max-width: 700px) {
+  .discounts-page {
+    padding: 18px;
+  }
+
+  .discounts-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .discount-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

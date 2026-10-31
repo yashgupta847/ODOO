@@ -1,11 +1,10 @@
-
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
 const { supabaseAdmin } = require("./src/config/supabase");
 const authRoutes = require("./src/routes/auth.routes");
-
+const productRoutes = require("./src/routes/products.routes");
 const app = express();
 
 // Middleware
@@ -13,7 +12,23 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
-
+app.use("/api/products", productRoutes);
+const variantRoutes = require("./src/routes/variants.routes");
+app.use("/api/variants", variantRoutes);
+const subscriptionRoutes = require("./src/routes/subscriptions.routes");
+app.use("/api/subscriptions", subscriptionRoutes);
+const quotationRoutes = require("./src/routes/quotations.routes");
+app.use("/api/quotations", quotationRoutes);
+const invoiceRoutes = require("./src/routes/invoices.routes");
+app.use("/api/invoices", invoiceRoutes);
+const paymentRoutes = require("./src/routes/payments.routes");
+app.use("/api/payments", paymentRoutes);
+const discountRoutes = require("./src/routes/discounts.routes");
+app.use("/api/discounts", discountRoutes);
+const dashboardRoutes = require("./src/routes/dashboard.routes");
+app.use("/api/dashboard", dashboardRoutes);
+const planRoutes = require("./src/routes/plans.routes");
+app.use("/api/plans", planRoutes);
 app.get("/", (req, res) => {
   res.json({
     message: "Subscription Management API is running!",
@@ -44,6 +59,7 @@ app.get("/test-db", async (req, res) => {
   }
 });
 
+// Start server
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {

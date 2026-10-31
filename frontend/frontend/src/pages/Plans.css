@@ -1,0 +1,292 @@
+
+.plans-page {
+  padding: 32px;
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #182230;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.plans-header,
+.plan-form-heading,
+.plans-table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.plans-eyebrow {
+  color: #6658d3;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.plans-header h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.plans-header p,
+.plans-table-heading p {
+  color: #8490a2;
+  margin: 0;
+  font-size: 14px;
+}
+
+.plan-primary-btn {
+  border: none;
+  border-radius: 9px;
+  background: #6254d9;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.plan-primary-btn:hover {
+  background: #5042c0;
+  transform: translateY(-1px);
+}
+
+.plans-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.plan-stat-card,
+.plans-table-card,
+.plan-form {
+  background: white;
+  border: 1px solid #e9edf4;
+  border-radius: 13px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(20, 30, 60, 0.035);
+}
+
+.plan-stat-card span {
+  display: block;
+  color: #8490a2;
+  font-size: 13px;
+}
+
+.plan-stat-card strong {
+  display: block;
+  font-size: 27px;
+  margin-top: 10px;
+  color: #252c40;
+}
+
+.plan-form {
+  margin-bottom: 24px;
+}
+
+.plan-form-heading {
+  margin-bottom: 22px;
+}
+
+.plan-form-heading h2,
+.plans-table-heading h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.plan-close {
+  border: none;
+  background: #f1f2f8;
+  border-radius: 7px;
+  padding: 8px 11px;
+  cursor: pointer;
+}
+
+.plan-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.plan-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #465168;
+}
+
+.plan-form-grid input,
+.plan-form-grid select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #dfe4ed;
+  border-radius: 8px;
+  background: #fff;
+  color: #253047;
+  outline: none;
+  font-size: 14px;
+}
+
+.plan-form-grid input:focus,
+.plan-form-grid select:focus {
+  border-color: #6254d9;
+  box-shadow: 0 0 0 3px rgba(98, 84, 217, 0.1);
+}
+
+.plan-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.plan-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: #465168;
+}
+
+.plan-checkbox input {
+  accent-color: #6254d9;
+  width: 16px;
+  height: 16px;
+}
+
+.plan-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.plan-secondary-btn,
+.plan-edit-btn {
+  padding: 10px 17px;
+  border: 1px solid #e1e5ee;
+  border-radius: 8px;
+  background: white;
+  color: #47536a;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.plan-edit-btn {
+  padding: 7px 13px;
+  color: #6254d9;
+  border-color: #e2defd;
+  background: #f5f3ff;
+}
+
+.plans-table-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.plans-table-heading {
+  padding: 22px;
+}
+
+.plans-count {
+  background: #f1efff;
+  color: #6254d9;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.plans-table-wrapper {
+  overflow-x: auto;
+}
+
+.plans-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.plans-table th {
+  background: #f8f9fc;
+  color: #8490a2;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 15px 22px;
+}
+
+.plans-table td {
+  padding: 17px 22px;
+  border-top: 1px solid #f0f2f6;
+  font-size: 13px;
+  color: #586479;
+}
+
+.plans-table td strong {
+  color: #253047;
+}
+
+.billing-badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #5364c5;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.plan-price {
+  font-weight: 700;
+  color: #26334a !important;
+}
+
+.plans-empty {
+  text-align: center;
+  padding: 35px !important;
+  color: #929bad !important;
+}
+
+.plans-error {
+  background: #fff0f0;
+  color: #c03939;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 18px;
+  font-size: 13px;
+}
+
+.plans-loading {
+  padding: 40px;
+  color: #667085;
+}
+
+@media (max-width: 700px) {
+  .plans-page {
+    padding: 18px;
+  }
+
+  .plans-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .plans-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-form-grid,
+  .plan-options {
+    grid-template-columns: 1fr;
+  }
+
+  .plans-table-heading {
+    align-items: flex-start;
+  }
+}
