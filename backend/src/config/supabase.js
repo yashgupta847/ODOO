@@ -1,3 +1,10 @@
+const path = require("path");
+
+// Load backend/.env explicitly
+require("dotenv").config({
+  path: path.resolve(__dirname, "../../.env"),
+});
+
 const { createClient } = require("@supabase/supabase-js");
 
 const supabaseAuth = createClient(
@@ -22,7 +29,4 @@ const supabaseAdmin = createClient(
   }
 );
 
-module.exports = {
-  supabaseAuth,
-  supabaseAdmin,
-};
+module.exports = { supabaseAuth, supabaseAdmin };
